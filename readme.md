@@ -8,6 +8,11 @@ Note_Taker
         - service-discovery(this will contain the nginx configuration)
 ```
 
+1. Make the "run.sh" runnable
+```cmd
+chmod +x run.sh
+# to run just execute: run.sh
+```
 
 1. Run the server
 

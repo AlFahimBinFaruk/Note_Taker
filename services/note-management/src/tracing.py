@@ -4,7 +4,6 @@ from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
 from opentelemetry.sdk.resources import SERVICE_NAME,Resource
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
-from opentelemetry.instrumentation.sqlalchemy import SQLAlchemyInstrumentor
 from opentelemetry.instrumentation.logging import LoggingInstrumentor
 import logging
 import os
@@ -44,12 +43,6 @@ def setup_telemetry(app,engine=None):
 
     # Instrumentation
     FastAPIInstrumentor.instrument_app(app)
-
-    if engine:
-        SQLAlchemyInstrumentor().instrument(
-            engine=engine,
-            service=service_name
-            )
 
     LoggingInstrumentor().instrument(set_logging_format=True)
 

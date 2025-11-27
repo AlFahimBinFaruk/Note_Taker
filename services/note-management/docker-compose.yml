@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     volumes:
-      - mongodb_data:data/db
+      - mongodb_data:/data/db
     networks:
       - fastapi_network
 

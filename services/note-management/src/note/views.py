@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from .schemas import NoteCreate, NoteRead
 from .services import create_note, get_user_notes
