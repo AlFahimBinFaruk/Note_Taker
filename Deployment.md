@@ -1,0 +1,4 @@
+- Deployment usng ECR & ECS(public subnet).
+- DB: Aurora Postgresql. private subnet.
+- CloudWatch for logs.
+- ALB with Auto Scaling Group.

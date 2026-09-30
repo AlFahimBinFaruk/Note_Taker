@@ -7,6 +7,22 @@ docker compose up --build
 docker compose up --scale fastapi_app=3
 ```
 
+## Run services
+
+Start both the backend and frontend:
+
+```sh
+make run-all
+```
+
+Run only the backend:
+
+```sh
+make run-backend
+```
+
+The frontend is available at `http://localhost:5173` and proxies API requests to the backend on port 80. Stop the running services with `Ctrl+C`.
+
 2. Run the seeder(from your project root,outside src dir)
 
 ```cmd

@@ -3,8 +3,6 @@ server:
   # in out setup prometheus will use this endpoint to scrape metrics that tempo got from OTEL.
   http_listen_port: 3200
 
-
-
 distributor:
   # define which protocols can send traces to tempo.
   receivers:
